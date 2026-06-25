@@ -1,0 +1,74 @@
+{
+  "films": [
+    {
+      "title": "You & Me",
+      "native": "A Romantic Thriller",
+      "genre": "Romantic Thriller",
+      "year": "2025",
+      "langs": ["Telugu", "Hindi"],
+      "runtime": "2h 04m",
+      "rating": "A",
+      "director": "Shiva Kovelkar",
+      "production": "Nish Raj Productions",
+      "poster": "assets/films/you-and-me.jpg",
+      "status": "New Release",
+      "synopsis": "A razor-edged romantic thriller where desire and danger share the same bed. Produced by Nisha Singh with story, screenplay, dialogues and direction by Shiva Kovelkar — cinematography by Kolli Prasad and music by Sri Venkat. Passion turns to suspicion, and love becomes the deadliest game of all."
+    },
+    {
+      "title": "Dakshina Kali",
+      "native": "దక్షిణ కాళీ",
+      "genre": "Devotional Drama",
+      "year": "2024",
+      "langs": ["Telugu", "Tamil", "Kannada"],
+      "runtime": "2h 18m",
+      "rating": "U/A",
+      "director": "Thota Krishna",
+      "production": "Srinidhi Creations",
+      "poster": "assets/films/dakshina-kali.jpg",
+      "status": "Now Streaming",
+      "synopsis": "A fierce mythological drama channelling the divine power of Goddess Kali. When darkness descends on a temple town, an ordinary family is drawn into a battle between devotion and evil — and the Goddess answers. A grand, faith-driven spectacle released simultaneously across three languages."
+    },
+    {
+      "title": "Prati Friendu Avasarama",
+      "native": "ప్రతి ఫ్రెండు అవసరమా",
+      "genre": "Emotional Drama",
+      "year": "2023",
+      "langs": ["Telugu"],
+      "runtime": "2h 06m",
+      "rating": "U/A",
+      "director": "Vijay Peddakotla",
+      "production": "SSV Movie Makers",
+      "poster": "assets/films/prati-hrudayam.jpg",
+      "status": "Now Streaming",
+      "synopsis": "An intimate ensemble drama about love, family and the quiet question every heart asks — does it matter? Interlocking stories of ordinary people search for meaning and connection in modern Telugu life. A warm, character-driven festival favourite."
+    },
+    {
+      "title": "The Game of Chaduranga",
+      "native": "4K · Kannada",
+      "genre": "Crime Thriller",
+      "year": "2023",
+      "langs": ["Kannada", "4K"],
+      "runtime": "2h 11m",
+      "rating": "U/A",
+      "director": "Praveen Jayanna",
+      "production": "Eagle Captures · SRS Media Vision",
+      "poster": "assets/films/game-of-chaduranga.jpg",
+      "status": "Now Streaming",
+      "synopsis": "Every move is calculated. Every player has a secret. A taut Kannada crime thriller where ambition, betrayal and power play out like a deadly game of chess. Available in stunning 4K — a slick, twist-laden ride to the very last square."
+    },
+    {
+      "title": "Ika Nee Love",
+      "native": "ఇక నీ లవ్",
+      "genre": "Romance",
+      "year": "2022",
+      "langs": ["Telugu"],
+      "runtime": "1h 58m",
+      "rating": "U/A",
+      "director": "Srinivas",
+      "production": "Independent",
+      "poster": "assets/films/ika-nee-love.jpg",
+      "status": "Now Streaming",
+      "synopsis": "A tender, music-laced Telugu romance about young love, distance and second chances. When two hearts drift apart, fate writes one more verse. Soulful, sincere and made for anyone who's ever believed in love that finds its way back."
+    }
+  ]
+}

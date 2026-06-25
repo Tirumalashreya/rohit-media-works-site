@@ -1,0 +1,16 @@
+{
+  "eyebrow": "AI Originals · In Production",
+  "heading": "Films made entirely with AI",
+  "intro": "Our in-house AI pipeline doesn't just localize and market films — it makes them. Original stories, generated and crafted frame by frame, heading to release.",
+  "items": [
+    {
+      "title": "Karma",
+      "tagline": "An AI-made feature — coming soon",
+      "genre": "Mystery Thriller",
+      "status": "Unreleased · AI Original",
+      "poster": "",
+      "trailer": "assets/ai-originals/karma-trailer.mp4",
+      "synopsis": "Every action returns. Karma is a full-length feature crafted end-to-end with our generative AI filmmaking pipeline — characters, environments and visual effects produced without a traditional camera. A glimpse of cinema's next chapter, now in final production."
+    }
+  ]
+}

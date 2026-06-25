@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Theatrical Distribution — Rohit Media Works</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Manrope:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/styles.css" />
+<link rel="stylesheet" href="../assets/service-page.css" />
+<style>:root { --acc: var(--ember); --acc-glow: var(--ember-glow); }</style>
+</head>
+<body>
+
+<nav class="sp-nav">
+  <div class="sp-nav-inner">
+    <a class="sp-back" href="../index.html#services">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+      Back to all capabilities
+    </a>
+    <a class="brand" href="../index.html#top" aria-label="Rohit Media Works home">
+      <span class="brand-mark">R</span>
+      <span><span class="brand-name">Rohit Media Works</span><span class="brand-sub">Media Distribution &amp; Solutions</span></span>
+    </a>
+  </div>
+</nav>
+
+<header class="sp-hero">
+  <img class="sp-hero-img" src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=1800&q=80&auto=format&fit=crop" alt="Cinema auditorium" />
+  <div class="sp-hero-inner">
+    <span class="sp-eyebrow"><span class="dot"></span> Capability 02 · Theatrical Distribution</span>
+    <h1>Theatrical Distribution</h1>
+    <p class="sp-lede">Take your film to audiences across India and worldwide.</p>
+  </div>
+</header>
+
+<main class="sp-body">
+  <p class="sp-intro" data-sp>Theatrical distribution for feature films, independent films, dubbed films and regional cinema.</p>
+
+  <div class="sp-section cols">
+    <div data-sp>
+      <span class="sp-kicker">The Network</span>
+      <h2 class="sp-h2">From the biggest multiplexes to the single screen down the road.</h2>
+    </div>
+    <div data-sp>
+      <p class="sp-text">We plan and execute releases across India and overseas — building the right circuit for every title, negotiating screens, and supporting the campaign on the ground from first-day-first-show to long-run holds.</p>
+    </div>
+  </div>
+
+  <div class="sp-section" data-sp>
+    <span class="sp-kicker">Distribution Network</span>
+    <h2 class="sp-h2" style="margin-bottom:28px;">Where your film plays</h2>
+    <div class="sp-chips">
+      <span class="sp-chip">PVR INOX</span>
+      <span class="sp-chip">Asian Cinemas</span>
+      <span class="sp-chip">Major National Multiplex Chains</span>
+      <span class="sp-chip">Single Screen Theatres Across India</span>
+      <span class="sp-chip">Overseas &amp; International Territories</span>
+    </div>
+  </div>
+
+  <div class="sp-section" data-sp>
+    <span class="sp-kicker">Our Services</span>
+    <h2 class="sp-h2" style="margin-bottom:28px;">Complete theatrical solutions</h2>
+    <div class="sp-list">
+      <div class="it"><span class="n">01</span> India-Wide Theatrical Release Planning</div>
+      <div class="it"><span class="n">02</span> Regional Territory Distribution</div>
+      <div class="it"><span class="n">03</span> Overseas Distribution</div>
+      <div class="it"><span class="n">04</span> Multiplex &amp; Single Screen Booking</div>
+      <div class="it"><span class="n">05</span> Marketing Support &amp; Release Strategy</div>
+      <div class="it"><span class="n">06</span> Area-Wise Rights Sales</div>
+    </div>
+  </div>
+
+  <div class="sp-callout" data-sp>
+    <h3>Area rights available</h3>
+    <p>Distributors, exhibitors and investors can acquire area-wise theatrical rights for selected titles across various territories in India and overseas markets. Whether you're releasing nationwide or acquiring rights for a specific territory, we provide complete theatrical distribution solutions.</p>
+    <div class="sp-actions">
+      <a class="btn btn-primary" href="../index.html#contact"><span class="btn-text">Enquire about rights</span><span class="arw">→</span></a>
+      <a class="btn btn-ghost" href="../index.html#services">View all capabilities</a>
+    </div>
+  </div>
+</main>
+
+<footer class="sp-foot">
+  <span>© 2026 Rohit Media Works · Hyderabad, India</span>
+  <a href="../index.html#services">← All capabilities</a>
+</footer>
+
+<script>
+  (function () {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('[data-sp]').forEach(function (el) { io.observe(el); });
+    setTimeout(function () { document.querySelectorAll('[data-sp]:not(.in)').forEach(function (el) { el.classList.add('in'); }); }, 1200);
+  })();
+</script>
+</body>
+</html>

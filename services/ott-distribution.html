@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>OTT Distribution — Rohit Media Works</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Manrope:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/styles.css" />
+<link rel="stylesheet" href="../assets/service-page.css" />
+<style>:root { --acc: var(--gold); --acc-glow: var(--gold-glow); }</style>
+</head>
+<body>
+
+<nav class="sp-nav">
+  <div class="sp-nav-inner">
+    <a class="sp-back" href="../index.html#services">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+      Back to all capabilities
+    </a>
+    <a class="brand" href="../index.html#top" aria-label="Rohit Media Works home">
+      <span class="brand-mark">R</span>
+      <span><span class="brand-name">Rohit Media Works</span><span class="brand-sub">Media Distribution &amp; Solutions</span></span>
+    </a>
+  </div>
+</nav>
+
+<header class="sp-hero">
+  <img class="sp-hero-img" src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=1800&q=80&auto=format&fit=crop" alt="Streaming on a large screen" />
+  <div class="sp-hero-inner">
+    <span class="sp-eyebrow"><span class="dot"></span> Capability 01 · OTT Distribution</span>
+    <h1>OTT Distribution</h1>
+    <p class="sp-lede">Expand your film's reach through leading OTT platforms across India and international markets.</p>
+  </div>
+</header>
+
+<main class="sp-body">
+  <p class="sp-intro" data-sp>End-to-end OTT distribution for feature films, independent films, web series, documentaries and digital content.</p>
+
+  <div class="sp-section cols">
+    <div data-sp>
+      <span class="sp-kicker">The Reach</span>
+      <h2 class="sp-h2">Your title, on every major platform.</h2>
+    </div>
+    <div data-sp>
+      <p class="sp-text">Through our network and platform partnerships, we help content owners showcase their titles on major OTT platforms — including Amazon Prime Video, Disney+ Hotstar, Aha, Sun NXT, Zee5, ETV Win and other regional and international streaming services.</p>
+      <p class="sp-text">Whether you are an independent filmmaker, producer or content owner, we help maximise the value of your content through strategic OTT distribution.</p>
+    </div>
+  </div>
+
+  <div class="sp-section" data-sp>
+    <span class="sp-kicker">Platforms we work with</span>
+    <h2 class="sp-h2" style="margin-bottom:28px;">Where your content lands</h2>
+    <div class="sp-chips">
+      <span class="sp-chip">Amazon Prime Video</span>
+      <span class="sp-chip">Disney+ Hotstar</span>
+      <span class="sp-chip">Aha</span>
+      <span class="sp-chip">Sun NXT</span>
+      <span class="sp-chip">Zee5</span>
+      <span class="sp-chip">ETV Win</span>
+      <span class="sp-chip">+ regional &amp; international services</span>
+    </div>
+  </div>
+
+  <div class="sp-section" data-sp>
+    <span class="sp-kicker">Our Services</span>
+    <h2 class="sp-h2" style="margin-bottom:28px;">What we handle for you</h2>
+    <div class="sp-list">
+      <div class="it"><span class="n">01</span> OTT Content Acquisition &amp; Distribution</div>
+      <div class="it"><span class="n">02</span> Digital Rights Licensing</div>
+      <div class="it"><span class="n">03</span> Regional &amp; International OTT Placement</div>
+      <div class="it"><span class="n">04</span> Content Delivery &amp; Platform Coordination</div>
+      <div class="it"><span class="n">05</span> Revenue Share &amp; Licensing Models</div>
+      <div class="it"><span class="n">06</span> Catalog &amp; Library Monetization</div>
+    </div>
+  </div>
+
+  <div class="sp-callout" data-sp>
+    <h3>Ready to put your content in front of millions?</h3>
+    <p>Tell us about your title and we'll map the right platforms, territories and licensing model to maximise its value.</p>
+    <div class="sp-actions">
+      <a class="btn btn-primary" href="../index.html#contact"><span class="btn-text">Start a Project</span><span class="arw">→</span></a>
+      <a class="btn btn-ghost" href="../index.html#services">View all capabilities</a>
+    </div>
+  </div>
+</main>
+
+<footer class="sp-foot">
+  <span>© 2026 Rohit Media Works · Hyderabad, India</span>
+  <a href="../index.html#services">← All capabilities</a>
+</footer>
+
+<script>
+  (function () {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('[data-sp]').forEach(function (el) { io.observe(el); });
+    // fallback
+    setTimeout(function () { document.querySelectorAll('[data-sp]:not(.in)').forEach(function (el) { el.classList.add('in'); }); }, 1200);
+  })();
+</script>
+</body>
+</html>
