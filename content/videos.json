@@ -1,0 +1,29 @@
+{
+  "_instructions": "Paste your Google Drive or YouTube links here. After updating, the website will load videos from these URLs instead of local files. See VIDEO-LINKS.html for full instructions.",
+  "videos": [
+    {
+      "id": "ai_intro",
+      "label": "AI Innovation section — background demo reel",
+      "used_in": "AI Innovation section (#ai)",
+      "current_file": "assets/ai-intro.mp4",
+      "hosted_url": "https://drive.google.com/uc?id=176X3yuqlmNZOHXVenEgsJjUNgdkWVQrV",
+      "type": "background"
+    },
+    {
+      "id": "ai_filmmaking",
+      "label": "AI Filmmaking — background video",
+      "used_in": "AI Innovation section (supplementary)",
+      "current_file": "assets/ai-filmmaking.mp4",
+      "hosted_url": "",
+      "type": "background"
+    },
+    {
+      "id": "karma_trailer",
+      "label": "Karma — official trailer",
+      "used_in": "AI Originals section (#ai-originals)",
+      "current_file": "assets/ai-originals/karma-trailer.mp4",
+      "hosted_url": "https://drive.google.com/uc?id=1PYqrJdfDMBTT-BwNnwVzdS1I85v4APwK",
+      "type": "trailer"
+    }
+  ]
+}

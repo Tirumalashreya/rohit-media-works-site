@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Video Links — Rohit Media Works</title>
+<style>
+  :root { --gold:#c8922a; --bg:#0f0d0b; --panel:#1a1714; --border:#2e2822; --ink:#f0ece4; --muted:#8a7e6e; --green:#2f7d46; --green-t:#e0f1e5; --mono:"IBM Plex Mono",monospace; }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--ink);padding:36px 24px 60px;max-width:900px;margin:0 auto;line-height:1.5;}
+  h1{font-size:1.6rem;font-weight:700;color:var(--gold);margin-bottom:6px;}
+  .sub{font-size:.9rem;color:var(--muted);margin-bottom:36px;}
+  h2{font-size:1rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:32px 0 14px;padding-bottom:8px;border-bottom:1px solid var(--border);}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:22px 24px;margin-bottom:14px;}
+  .card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:14px;}
+  .card-head .label{font-size:1rem;font-weight:700;}
+  .card-head .tag{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:6px;background:#2e2822;color:var(--muted);flex-shrink:0;}
+  .card-head .tag.trailer{background:#0f2a1a;color:#5ec47a;}
+  .field{margin-bottom:12px;}
+  .field label{display:block;font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;}
+  .field input{width:100%;padding:10px 13px;background:#0a0908;border:1px solid var(--border);border-radius:8px;color:var(--ink);font-size:.88rem;font-family:var(--mono);}
+  .field input:focus{outline:none;border-color:var(--gold);}
+  .field .hint{font-size:.75rem;color:var(--muted);margin-top:5px;}
+  .field .hint a{color:var(--gold);}
+  .current{font-family:var(--mono);font-size:.78rem;color:#5e5345;background:#0a0908;padding:6px 10px;border-radius:6px;display:inline-block;margin-top:4px;}
+  .how{background:var(--panel);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:12px;padding:22px 24px;margin-bottom:28px;}
+  .how h3{font-size:.85rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+  .how ol{padding-left:18px;}
+  .how li{font-size:.88rem;color:var(--muted);margin-bottom:8px;line-height:1.5;}
+  .how li b{color:var(--ink);}
+  .how code{font-family:var(--mono);font-size:.8rem;background:#0a0908;padding:1px 6px;border-radius:4px;color:#a8956a;}
+  .save-btn{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:#1a1208;font-size:.9rem;font-weight:700;padding:12px 22px;border-radius:9px;border:none;cursor:pointer;margin-top:8px;}
+  .save-btn:hover{opacity:.9;}
+  .ok{color:var(--green);font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;display:none;margin-top:8px;}
+  .ok.show{display:block;}
+  .note{font-size:.82rem;color:var(--muted);margin-top:28px;padding-top:18px;border-top:1px solid var(--border);line-height:1.6;}
+  .note b{color:var(--ink);}
+</style>
+</head>
+<body>
+
+<h1>🎬 Video Links — Rohit Media Works</h1>
+<p class="sub">Paste your Google Drive or YouTube links below. Send this sheet to your developer — they'll update the website to load from these URLs, so no large video files need to go on GitHub.</p>
+
+<div class="how">
+  <h3>How to get a Google Drive direct link</h3>
+  <ol>
+    <li>Upload your video to <b>Google Drive</b>.</li>
+    <li>Right-click the file → <b>Share</b> → change to <b>"Anyone with the link"</b> → Copy link.</li>
+    <li>You'll get a URL like: <code>https://drive.google.com/file/d/<b>FILE_ID</b>/view?usp=sharing</code></li>
+    <li>Paste that full URL in the field below. Done.</li>
+  </ol>
+  <br/>
+  <h3>Or: YouTube (recommended for trailers)</h3>
+  <ol>
+    <li>Upload to <b>YouTube</b> → set visibility to <b>Unlisted</b> (so only people with the link can see it).</li>
+    <li>Copy the video URL: <code>https://www.youtube.com/watch?v=<b>VIDEO_ID</b></code></li>
+    <li>Paste it below — the developer will embed it as a player on the site.</li>
+  </ol>
+</div>
+
+<h2>Videos to host</h2>
+
+<div class="card">
+  <div class="card-head">
+    <span class="label">AI Innovation — background demo reel</span>
+    <span class="tag">Background video</span>
+  </div>
+  <div class="field">
+    <label>Used in</label>
+    <span class="current">AI Innovation section (#ai) · autoplay, muted, looping background</span>
+  </div>
+  <div class="field">
+    <label>Current local file</label>
+    <span class="current">assets/ai-intro.mp4</span>
+  </div>
+  <div class="field">
+    <label>Your hosted link (Drive or YouTube)</label>
+    <input type="url" id="v1" placeholder="https://drive.google.com/file/d/…/view or https://youtu.be/…" />
+    <p class="hint">Tip: For background/looping videos, Google Drive works fine. For trailers with a play button, YouTube is better.</p>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-head">
+    <span class="label">AI Filmmaking — demo reel</span>
+    <span class="tag">Background video</span>
+  </div>
+  <div class="field">
+    <label>Used in</label>
+    <span class="current">AI section (supplementary showcase) · autoplay, muted, looping</span>
+  </div>
+  <div class="field">
+    <label>Current local file</label>
+    <span class="current">assets/ai-filmmaking.mp4</span>
+  </div>
+  <div class="field">
+    <label>Your hosted link (Drive or YouTube)</label>
+    <input type="url" id="v2" placeholder="https://drive.google.com/file/d/…/view or https://youtu.be/…" />
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-head">
+    <span class="label">Karma — official trailer</span>
+    <span class="tag trailer">🎞 Trailer</span>
+  </div>
+  <div class="field">
+    <label>Used in</label>
+    <span class="current">AI Originals section (#ai-originals) · click-to-play trailer with sound</span>
+  </div>
+  <div class="field">
+    <label>Current local file</label>
+    <span class="current">assets/ai-originals/karma-trailer.mp4</span>
+  </div>
+  <div class="field">
+    <label>Your hosted link (Drive or YouTube)</label>
+    <input type="url" id="v3" placeholder="https://drive.google.com/file/d/…/view or https://youtu.be/…" />
+    <p class="hint">Recommended: <b>YouTube unlisted</b> for the best trailer experience (quality + controls).</p>
+  </div>
+</div>
+
+<button class="save-btn" onclick="saveLinks()">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+  Copy links summary
+</button>
+<div class="ok" id="ok">✓ Copied to clipboard — send to your developer</div>
+
+<p class="note"><b>What to do with these links:</b> Fill in the fields above, click "Copy links summary", and paste them in a message to your developer. They'll update <code>content/videos.json</code> and the website code to load videos from your hosted URLs. Large video files (mp4) should stay off GitHub — use Drive or YouTube instead.</p>
+
+<script>
+function saveLinks(){
+  var v1=document.getElementById('v1').value;
+  var v2=document.getElementById('v2').value;
+  var v3=document.getElementById('v3').value;
+  var text=[
+    '=== VIDEO LINKS — Rohit Media Works ===\n',
+    '1. AI Innovation background reel (assets/ai-intro.mp4):\n   '+(v1||'[not filled]'),
+    '2. AI Filmmaking demo reel (assets/ai-filmmaking.mp4):\n   '+(v2||'[not filled]'),
+    '3. Karma trailer (assets/ai-originals/karma-trailer.mp4):\n   '+(v3||'[not filled]'),
+    '\n[Paste these URLs in content/videos.json or send to developer]'
+  ].join('\n');
+  navigator.clipboard.writeText(text).then(function(){
+    document.getElementById('ok').classList.add('show');
+    setTimeout(function(){document.getElementById('ok').classList.remove('show');},3000);
+  }).catch(function(){alert(text);});
+}
+</script>
+</body>
+</html>

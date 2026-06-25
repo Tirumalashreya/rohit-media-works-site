@@ -1,0 +1,161 @@
+# ============================================================
+# Rohit Media Works — Content Admin (Decap CMS)
+# Each "collection" below is one editable section of the site.
+# Edit a section, click Publish → it commits to GitHub → Netlify
+# rebuilds → the live site updates. No code required.
+# ------------------------------------------------------------
+# One-time Netlify setup (see NETLIFY-SETUP.md):
+#   1. Netlify → Identity → Enable Identity
+#   2. Identity → Services → Git Gateway → Enable
+#   3. Identity → Invite users → invite your email
+# ============================================================
+
+backend:
+  name: git-gateway
+  branch: main
+
+# Where uploaded images/posters are stored in the repo
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+# Friendly editor experience
+site_url: https://rohitmediaworks.com
+display_url: https://rohitmediaworks.com
+locale: en
+
+collections:
+  # ---------------- BUMPER OFFER ----------------
+  - name: "offer"
+    label: "🔥 Bumper Offer"
+    delete: false
+    files:
+      - name: "offer"
+        label: "AI Filmmaking Offer"
+        file: "content/offer.json"
+        description: "The limited-time offer banner."
+        fields:
+          - { name: enabled, label: "Show this offer on the site", widget: boolean, default: true }
+          - { name: flag, label: "Corner flag", widget: string, default: "Bumper Offer · Limited" }
+          - { name: eyebrow, label: "Eyebrow line", widget: string }
+          - { name: heading, label: "Headline", widget: string }
+          - { name: intro, label: "Intro paragraph", widget: text }
+          - { name: price_lead, label: "Price — lead line", widget: string }
+          - { name: price_amount, label: "Price — big amount", widget: string }
+          - { name: price_sub, label: "Price — sub line", widget: string }
+          - { name: cta_label, label: "Button text", widget: string }
+          - { name: slots_total, label: "Total slots", widget: number, value_type: int, default: 8 }
+          - { name: slots_left, label: "Slots left", widget: number, value_type: int, default: 2 }
+          - { name: deadline_note, label: "Deadline note", widget: string }
+
+  # ---------------- FILMS ----------------
+  - name: "films"
+    label: "🎬 Films"
+    delete: false
+    files:
+      - name: "films"
+        label: "Film Catalogue"
+        file: "content/films.json"
+        description: "Films shown in the catalogue rail. Drag to reorder; the first is the newest."
+        fields:
+          - name: films
+            label: "Films"
+            label_singular: "Film"
+            widget: list
+            summary: "{{fields.title}} ({{fields.year}})"
+            fields:
+              - { name: title, label: "Title", widget: string }
+              - { name: native, label: "Native / subtitle", widget: string, required: false }
+              - { name: genre, label: "Genre", widget: string }
+              - { name: year, label: "Year", widget: string }
+              - { name: langs, label: "Languages", widget: list, default: ["Telugu"] }
+              - { name: runtime, label: "Runtime", widget: string, required: false }
+              - { name: rating, label: "Rating", widget: string, required: false, default: "U/A" }
+              - { name: director, label: "Director", widget: string, required: false }
+              - { name: production, label: "Production house", widget: string, required: false }
+              - { name: poster, label: "Poster image", widget: image }
+              - { name: status, label: "Status badge", widget: select, options: ["New Release", "Now Streaming", "Coming Soon", "In Theatres"], default: "Now Streaming" }
+              - { name: synopsis, label: "Synopsis", widget: text }
+
+  # ---------------- AI ORIGINALS ----------------
+  - name: "ai_originals"
+    label: "🎞 AI Originals (Trailers)"
+    delete: false
+    files:
+      - name: "ai_originals"
+        label: "AI Originals"
+        file: "content/ai-originals.json"
+        description: "AI-made films & trailers — e.g. unreleased titles like Karma."
+        fields:
+          - { name: eyebrow, label: "Eyebrow", widget: string }
+          - { name: heading, label: "Heading", widget: string }
+          - { name: intro, label: "Intro", widget: text }
+          - name: items
+            label: "Titles"
+            label_singular: "Title"
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: "Title", widget: string }
+              - { name: tagline, label: "Tagline", widget: string, required: false }
+              - { name: genre, label: "Genre", widget: string, required: false }
+              - { name: status, label: "Status", widget: string, default: "Unreleased · AI Original" }
+              - { name: poster, label: "Poster (optional)", widget: image, required: false }
+              - { name: trailer, label: "Trailer video (mp4)", widget: file, required: false }
+              - { name: synopsis, label: "Synopsis", widget: text }
+
+  # ---------------- NETWORK / PARTNERS ----------------
+  - name: "network"
+    label: "🤝 Network / Partners"
+    delete: false
+    files:
+      - name: "network"
+        label: "Partners & Relationships"
+        file: "content/network.json"
+        description: "Industry relationships, OTT owners and platform partners."
+        fields:
+          - { name: eyebrow, label: "Eyebrow", widget: string }
+          - { name: heading, label: "Heading", widget: string }
+          - { name: intro, label: "Intro", widget: text }
+          - name: partners
+            label: "Partners"
+            label_singular: "Partner"
+            widget: list
+            summary: "{{fields.name}} — {{fields.role}}"
+            fields:
+              - { name: name, label: "Name", widget: string }
+              - { name: role, label: "Role", widget: string }
+              - { name: org, label: "Organisation", widget: string, required: false }
+              - { name: photo, label: "Photo", widget: image }
+              - { name: note, label: "Note", widget: text, required: false }
+
+  # ---------------- PRESS / JOURNEY ----------------
+  - name: "press"
+    label: "📰 Press & Journey"
+    delete: false
+    files:
+      - name: "press"
+        label: "Press & Leadership"
+        file: "content/press.json"
+        description: "Leadership profile and press coverage."
+        fields:
+          - { name: eyebrow, label: "Eyebrow", widget: string }
+          - { name: heading, label: "Heading", widget: string }
+          - { name: intro, label: "Intro", widget: text }
+          - name: profile
+            label: "Profile"
+            widget: object
+            fields:
+              - { name: name, label: "Name", widget: string }
+              - { name: title, label: "Title / roles", widget: string }
+              - { name: photo, label: "Photo", widget: image }
+              - { name: bio, label: "Biography", widget: text }
+          - name: clippings
+            label: "Press clippings"
+            label_singular: "Clipping"
+            widget: list
+            required: false
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: "Title", widget: string }
+              - { name: source, label: "Source", widget: string, required: false }
+              - { name: image, label: "Image", widget: image }
