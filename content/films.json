@@ -1,6 +1,20 @@
 {
   "films": [
     {
+      "title": "I Am Handsome",
+      "native": "An NS Prasu Musical",
+      "genre": "Romantic Drama",
+      "year": "2026",
+      "langs": ["Telugu"],
+      "runtime": "",
+      "rating": "U/A",
+      "director": "Durgha Dev Naidu",
+      "production": "Suhanvi Entertainments",
+      "poster": "assets/films/i-am-handsome.jpg",
+      "status": "New Release",
+      "synopsis": "A tender rural romance following two hearts finding their way to each other. Presented by Praveen Ramaraju, produced by Mahesh Gudaru, Kommidi Archana Reddy and Seethamraju Rajashekar — written and directed by Durgha Dev Naidu, with music by NS Prasu."
+    },
+    {
       "title": "You & Me",
       "native": "A Romantic Thriller",
       "genre": "Romantic Thriller",
