@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://rohitmediaworks.com/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://rohitmediaworks.com/services/theatrical-distribution.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rohitmediaworks.com/services/ott-distribution.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rohitmediaworks.com/services/airborne-rights.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rohitmediaworks.com/services/dubbing-rights.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rohitmediaworks.com/services/celebrity-management.html</loc>
+    <priority>0.8</priority>
+  </url>
+</urlset>
