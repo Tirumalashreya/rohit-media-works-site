@@ -1,6 +1,51 @@
 {
   "films": [
     {
+      "title": "Nelluri Nerajana",
+      "native": "ఓ అందగత్తె ప్రేమకథ",
+      "genre": "Romance",
+      "year": "2026",
+      "langs": ["Telugu"],
+      "runtime": "",
+      "rating": "U/A",
+      "director": "Subramanyam Chigurupati",
+      "production": "Chigurupati Creations",
+      "poster": "assets/films/nelluri-nerajana-1.jpg",
+      "posters": ["assets/films/nelluri-nerajana-1.jpg", "assets/films/nelluri-nerajana-2.jpg"],
+      "status": "Now Streaming",
+      "synopsis": "A beautiful girl's love story — written, scored and directed by Subramanyam Chigurupati, with cinematography by Gopi, music by Yarachala Venkatesh and editing by Duvvarapu Venkatesh."
+    },
+    {
+      "title": "Salaam Sainika",
+      "native": "నేను సైతం",
+      "genre": "Action Drama",
+      "year": "2026",
+      "langs": ["Telugu"],
+      "runtime": "",
+      "rating": "U/A",
+      "director": "",
+      "production": "",
+      "poster": "assets/films/salaam-sainika-1.jpg",
+      "posters": ["assets/films/salaam-sainika-1.jpg", "assets/films/salaam-sainika-2.jpg"],
+      "status": "Now Streaming",
+      "synopsis": "A hard-hitting social action drama following soldiers, officers and ordinary citizens caught in a fight for justice — a story of duty and defiance."
+    },
+    {
+      "title": "10 Rupees",
+      "native": "An Afzal Chitram",
+      "genre": "Thriller",
+      "year": "2026",
+      "langs": ["Telugu"],
+      "runtime": "",
+      "rating": "U/A",
+      "director": "Afzal",
+      "production": "Outstanding Cinema Production",
+      "poster": "assets/films/10-rupees-2.jpg",
+      "posters": ["assets/films/10-rupees-2.jpg", "assets/films/10-rupees-1.jpg"],
+      "status": "Now Streaming",
+      "synopsis": "A sharp thriller about how far a scam can travel over a single phone call. An Afzal Chitram, produced by Outstanding Cinema Production, released in theatres April 21."
+    },
+    {
       "title": "I Am Handsome",
       "native": "An NS Prasu Musical",
       "genre": "Romantic Drama",
