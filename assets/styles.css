@@ -827,12 +827,15 @@ section { position: relative; }
   transition: transform .5s var(--ease), border-color .5s var(--ease), box-shadow .5s var(--ease);
   isolation: isolate;
 }
-.film-card img {
+.film-poster { position: absolute; inset: 0; }
+.film-poster-img {
   position: absolute; inset: 0;
   width: 100%; height: 100%;
   object-fit: cover; object-position: center top;
-  transition: transform .7s var(--ease), filter .5s var(--ease);
+  opacity: 0;
+  transition: opacity 1s var(--ease), transform .7s var(--ease), filter .5s var(--ease);
 }
+.film-poster-img.is-on { opacity: 1; }
 /* landscape poster in a portrait card: show it whole over a blurred fill */
 .film-card.is-landscape::before {
   content: ""; position: absolute; inset: 0; z-index: 0;
@@ -840,11 +843,21 @@ section { position: relative; }
   filter: blur(30px) brightness(0.42) saturate(1.1);
   transform: scale(1.3);
 }
-.film-card.is-landscape img {
+.film-card.is-landscape .film-poster-img {
   object-fit: contain;
   object-position: center 22%;
   z-index: 1;
 }
+.film-poster-dots {
+  position: absolute; top: 10px; right: 10px; z-index: 2;
+  display: flex; gap: 4px;
+}
+.film-poster-dots span {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: oklch(1 0 0 / 0.4);
+  transition: background .4s var(--ease), transform .4s var(--ease);
+}
+.film-poster-dots span.is-on { background: var(--gold); transform: scale(1.25); }
 .film-card::after {
   content: ""; position: absolute; inset: 0; z-index: 1;
   background: linear-gradient(180deg, transparent 35%, oklch(0.1 0.01 58 / 0.55) 68%, oklch(0.09 0.01 58 / 0.96) 100%);
@@ -855,7 +868,7 @@ section { position: relative; }
   border-color: color-mix(in oklab, var(--gold) 50%, transparent);
   box-shadow: 0 34px 70px -28px oklch(0.06 0.01 60 / 0.9);
 }
-.film-card:hover img { transform: scale(1.06); }
+.film-card:hover .film-poster-img.is-on { transform: scale(1.06); }
 
 .film-meta {
   position: absolute; inset: auto 0 0 0; z-index: 2;

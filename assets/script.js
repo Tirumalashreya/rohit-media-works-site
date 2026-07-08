@@ -186,6 +186,23 @@
     const arrows = document.querySelectorAll(".films-controls .slider-arrow");
     // duplicate the cards once so the auto-scroll can loop seamlessly
     [...rail.children].forEach((c) => rail.appendChild(c.cloneNode(true)));
+
+    // per-card poster carousel: cross-fade between a film's own posters
+    rail.querySelectorAll(".film-poster").forEach((wrap) => {
+      const slides = wrap.querySelectorAll(".film-poster-img");
+      if (slides.length < 2) return;
+      const dots = wrap.querySelectorAll(".film-poster-dots span");
+      let i = 0;
+      setInterval(() => {
+        if (document.hidden) return;
+        slides[i].classList.remove("is-on");
+        dots[i] && dots[i].classList.remove("is-on");
+        i = (i + 1) % slides.length;
+        slides[i].classList.add("is-on");
+        dots[i] && dots[i].classList.add("is-on");
+      }, 2800 + Math.round(Math.random() * 400));
+    });
+
     function cardStep() {
       const card = rail.querySelector(".film-card");
       if (!card) return 320;
