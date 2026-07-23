@@ -1,6 +1,20 @@
 {
   "films": [
     {
+      "title": "Gulabi",
+      "native": "గులాబి",
+      "genre": "Horror Thriller",
+      "year": "2026",
+      "langs": ["Telugu"],
+      "runtime": "",
+      "rating": "U/A",
+      "director": "Kiran P Kumar",
+      "production": "Jai Veer Films",
+      "poster": "assets/films/gulabi.jpg",
+      "status": "Now Streaming",
+      "synopsis": "A woman finds herself surrounded by faceless masks she can't escape. A film by Kiran P Kumar, produced by Kiran Kumar Poluri — cinematography by M.S. Kiran Kumar, music by Abu, editing by Ramakrishna Arram."
+    },
+    {
       "title": "Nelluri Nerajana",
       "native": "ఓ అందగత్తె ప్రేమకథ",
       "genre": "Romance",
