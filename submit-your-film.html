@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Submit Your Film — Hindi Market Distribution | Rohit Media Works</title>
+<meta name="description" content="Submit your regional film for Hindi dubbing rights and distribution consideration by Rohit Media Works." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Manrope:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+<link rel="stylesheet" href="assets/service-page.css" />
+<style>
+  :root { --acc: var(--gold); --acc-glow: var(--gold-glow); }
+  .cf input[type="file"] {
+    padding: 10px 15px; cursor: pointer;
+    color: var(--ink-soft); font-size: 0.88rem;
+  }
+  .cf input[type="file"]::file-selector-button {
+    margin-right: 12px; padding: 8px 14px; border-radius: 8px;
+    border: 1px solid var(--hair); background: oklch(1 0 0 / 0.04);
+    color: var(--ink); font-family: var(--sans); font-size: 0.82rem; cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<nav class="sp-nav">
+  <div class="sp-nav-inner">
+    <a class="sp-back" href="index.html#films">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+      Back to films
+    </a>
+    <a class="brand" href="index.html#top" aria-label="Rohit Media Works home">
+      <span class="brand-mark">R</span>
+      <span><span class="brand-name">Rohit Media Works</span><span class="brand-sub">Media Distribution &amp; Solutions</span></span>
+    </a>
+  </div>
+</nav>
+
+<header class="sp-hero">
+  <img class="sp-hero-img" src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1800&q=80&auto=format&fit=crop" alt="Film reel and cinema production" />
+  <div class="sp-hero-inner">
+    <span class="sp-eyebrow"><span class="dot"></span> Dubbing Rights · Hindi Market Submissions</span>
+    <h1>Submit Your Film for the Hindi Market</h1>
+    <p class="sp-lede">Tell us about your film and we'll evaluate it for Hindi dubbing rights and North Indian distribution.</p>
+  </div>
+</header>
+
+<main class="sp-body">
+  <p class="sp-intro" data-sp>We've sold close to 17 Telugu films into Hindi and North Indian markets. If you own or represent a regional film, submit the details below for consideration.</p>
+
+  <div class="sp-section" data-sp style="max-width: 760px;">
+    <form class="cf" id="filmSubmitForm" action="https://formsubmit.co/rohitaddanki3761@gmail.com" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="_subject" value="New film submission — Hindi market consideration" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_next" value="https://rohitmediaworks.com/submit-your-film.html?sent=1" />
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
+      <div class="cf-row">
+        <div class="cf-field">
+          <label for="fs-title">1. Movie name</label>
+          <input id="fs-title" name="Movie Name" type="text" placeholder="Film title" required />
+        </div>
+        <div class="cf-field">
+          <label for="fs-lang">2. Original language</label>
+          <select id="fs-lang" name="Original Language" required>
+            <option value="" disabled selected>Select a language</option>
+            <option>Telugu</option>
+            <option>Tamil</option>
+            <option>Kannada</option>
+            <option>Malayalam</option>
+            <option>Marathi</option>
+            <option>Bengali</option>
+            <option>Punjabi</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="cf-row">
+        <div class="cf-field">
+          <label for="fs-year">3. Year of release</label>
+          <input id="fs-year" name="Year of Release" type="text" placeholder="e.g. 2025" required />
+        </div>
+        <div class="cf-field">
+          <label for="fs-genre">4. Genre</label>
+          <input id="fs-genre" name="Genre" type="text" placeholder="e.g. Romantic Thriller" required />
+        </div>
+      </div>
+
+      <div class="cf-row">
+        <div class="cf-field">
+          <label for="fs-runtime">5. Runtime</label>
+          <input id="fs-runtime" name="Runtime" type="text" placeholder="e.g. 2h 10m" />
+        </div>
+        <div class="cf-field">
+          <label for="fs-srt">11. English subtitle (.SRT) available?</label>
+          <select id="fs-srt" name="English Subtitle Available" required>
+            <option value="" disabled selected>Select an option</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="cf-row">
+        <div class="cf-field">
+          <label for="fs-imdb">6. IMDb link <span style="text-transform:none;letter-spacing:0">(optional)</span></label>
+          <input id="fs-imdb" name="IMDb Link" type="url" placeholder="https://imdb.com/title/…" />
+        </div>
+        <div class="cf-field">
+          <label for="fs-bms">7. BookMyShow link <span style="text-transform:none;letter-spacing:0">(optional)</span></label>
+          <input id="fs-bms" name="BookMyShow Link" type="url" placeholder="https://in.bookmyshow.com/…" />
+        </div>
+      </div>
+
+      <div class="cf-row">
+        <div class="cf-field">
+          <label for="fs-wiki">8. Wikipedia link <span style="text-transform:none;letter-spacing:0">(if available)</span></label>
+          <input id="fs-wiki" name="Wikipedia Link" type="url" placeholder="https://en.wikipedia.org/wiki/…" />
+        </div>
+        <div class="cf-field">
+          <label for="fs-trailer">9. Trailer link</label>
+          <input id="fs-trailer" name="Trailer Link" type="url" placeholder="YouTube / Google Drive / Vimeo / other" required />
+        </div>
+      </div>
+
+      <div class="cf-field full">
+        <label for="fs-synopsis">10. Synopsis</label>
+        <textarea id="fs-synopsis" name="Synopsis" placeholder="A brief summary of the film's story" required></textarea>
+      </div>
+
+      <div class="cf-field full">
+        <label for="fs-poster">12. Poster upload</label>
+        <input id="fs-poster" name="Poster" type="file" accept="image/*" />
+      </div>
+
+      <div class="cf-row">
+        <div class="cf-field">
+          <label for="fs-name">13. Contact name</label>
+          <input id="fs-name" name="Contact Name" type="text" placeholder="Your full name" required />
+        </div>
+        <div class="cf-field">
+          <label for="fs-mobile">14. Mobile number</label>
+          <input id="fs-mobile" name="Mobile Number" type="tel" placeholder="+91 …" required />
+        </div>
+      </div>
+
+      <div class="cf-field full">
+        <label for="fs-why">15. Why do you think this film will work well in the Hindi market?</label>
+        <textarea id="fs-why" name="Why Hindi Market" placeholder="Tell us what makes this film a fit for Hindi audiences" required></textarea>
+      </div>
+
+      <div class="cf-submit">
+        <button type="submit" class="btn btn-primary"><span class="btn-text">Submit film</span><span class="arw">→</span></button>
+        <span class="cf-note">Goes straight to our inbox · we reply within 1–2 days</span>
+      </div>
+    </form>
+
+    <div class="cf-success" id="fsSuccess" hidden>
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
+      <h3>Thank you — your film has been submitted.</h3>
+      <p>We've received your details and will review them for Hindi market fit. We'll reach out at the contact you provided.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="sp-foot">
+  <span>© 2026 Rohit Media Works · Hyderabad, India</span>
+  <a href="index.html#films">← Back to films</a>
+</footer>
+
+<script>
+  (function () {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('[data-sp]').forEach(function (el) { io.observe(el); });
+    setTimeout(function () { document.querySelectorAll('[data-sp]:not(.in)').forEach(function (el) { el.classList.add('in'); }); }, 1200);
+
+    if (location.search.indexOf('sent=1') !== -1) {
+      var form = document.getElementById('filmSubmitForm');
+      var success = document.getElementById('fsSuccess');
+      if (form) form.style.display = 'none';
+      if (success) success.hidden = false;
+    }
+  })();
+</script>
+</body>
+</html>
