@@ -133,8 +133,9 @@
       </div>
 
       <div class="cf-field full">
-        <label for="fs-poster">12. Poster upload</label>
+        <label for="fs-poster">12. Poster upload <span style="text-transform:none;letter-spacing:0">(max 10MB — please compress large images first)</span></label>
         <input id="fs-poster" name="Poster" type="file" accept="image/*" />
+        <span class="cf-file-err" id="fsPosterErr" style="display:none;color:oklch(0.7 0.16 25);font-size:0.85rem;"></span>
       </div>
 
       <div class="cf-row">
@@ -185,6 +186,33 @@
       var success = document.getElementById('fsSuccess');
       if (form) form.style.display = 'none';
       if (success) success.hidden = false;
+    }
+
+    var posterInput = document.getElementById('fs-poster');
+    var posterErr = document.getElementById('fsPosterErr');
+    var MAX_BYTES = 10 * 1024 * 1024;
+    if (posterInput) {
+      posterInput.addEventListener('change', function () {
+        var file = posterInput.files[0];
+        if (file && file.size > MAX_BYTES) {
+          posterErr.textContent = 'This file is ' + (file.size / 1024 / 1024).toFixed(1) + 'MB — please compress it to under 10MB and re-select.';
+          posterErr.style.display = 'block';
+          posterInput.value = '';
+        } else {
+          posterErr.style.display = 'none';
+        }
+      });
+    }
+    var filmForm = document.getElementById('filmSubmitForm');
+    if (filmForm) {
+      filmForm.addEventListener('submit', function (e) {
+        var file = posterInput && posterInput.files[0];
+        if (file && file.size > MAX_BYTES) {
+          e.preventDefault();
+          posterErr.textContent = 'This file is ' + (file.size / 1024 / 1024).toFixed(1) + 'MB — please compress it to under 10MB and re-select.';
+          posterErr.style.display = 'block';
+        }
+      });
     }
   })();
 </script>
