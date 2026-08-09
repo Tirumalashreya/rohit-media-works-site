@@ -475,7 +475,7 @@
         status.className = "cf-status err";
         status.innerHTML =
           'Couldn\'t send just now. Please email us directly at ' +
-          '<a href="mailto:rohitaddanki3761@gmail.com" style="color:var(--gold)">rohitaddanki3761@gmail.com</a>.';
+          '<a href="mailto:rohitbharadwaj376@gmail.com" style="color:var(--gold)">rohitbharadwaj376@gmail.com</a>.';
         if (label) label.textContent = original;
         btn.disabled = false;
       }
