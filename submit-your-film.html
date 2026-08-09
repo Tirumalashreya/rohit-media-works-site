@@ -51,12 +51,9 @@
   <p class="sp-intro" data-sp>We've sold close to 17 Telugu films into Hindi and North Indian markets. If you own or represent a regional film, submit the details below for consideration.</p>
 
   <div class="sp-section" data-sp style="max-width: 760px;">
-    <form class="cf" id="filmSubmitForm" action="https://formsubmit.co/rohitaddanki3761@gmail.com" method="POST" enctype="multipart/form-data">
-      <input type="hidden" name="_subject" value="New film submission — Hindi market consideration" />
-      <input type="hidden" name="_template" value="table" />
-      <input type="hidden" name="_captcha" value="false" />
-      <input type="hidden" name="_next" value="https://rohitmediaworks.com/submit-your-film.html?sent=1" />
-      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+    <form class="cf" id="filmSubmitForm" name="film-submission" method="POST" action="/submit-your-film.html?sent=1" enctype="multipart/form-data" data-netlify="true" data-netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="film-submission" />
+      <p style="display:none"><label>Don't fill this out: <input name="bot-field" /></label></p>
 
       <div class="cf-row">
         <div class="cf-field">
