@@ -130,7 +130,7 @@
       </div>
 
       <div class="cf-field full">
-        <label for="fs-poster">12. Poster upload <span style="text-transform:none;letter-spacing:0">(max 10MB — please compress large images first)</span></label>
+        <label for="fs-poster">12. Poster upload <span style="text-transform:none;letter-spacing:0">(max 8MB — please compress large images first)</span></label>
         <input id="fs-poster" name="Poster" type="file" accept="image/*" />
         <span class="cf-file-err" id="fsPosterErr" style="display:none;color:oklch(0.7 0.16 25);font-size:0.85rem;"></span>
       </div>
@@ -187,12 +187,12 @@
 
     var posterInput = document.getElementById('fs-poster');
     var posterErr = document.getElementById('fsPosterErr');
-    var MAX_BYTES = 10 * 1024 * 1024;
+    var MAX_BYTES = 7.5 * 1024 * 1024; // Netlify caps the whole form request at 8MB, leave headroom for other fields
     if (posterInput) {
       posterInput.addEventListener('change', function () {
         var file = posterInput.files[0];
         if (file && file.size > MAX_BYTES) {
-          posterErr.textContent = 'This file is ' + (file.size / 1024 / 1024).toFixed(1) + 'MB — please compress it to under 10MB and re-select.';
+          posterErr.textContent = 'This file is ' + (file.size / 1024 / 1024).toFixed(1) + 'MB — please compress it to under 8MB and re-select.';
           posterErr.style.display = 'block';
           posterInput.value = '';
         } else {
@@ -206,7 +206,7 @@
         var file = posterInput && posterInput.files[0];
         if (file && file.size > MAX_BYTES) {
           e.preventDefault();
-          posterErr.textContent = 'This file is ' + (file.size / 1024 / 1024).toFixed(1) + 'MB — please compress it to under 10MB and re-select.';
+          posterErr.textContent = 'This file is ' + (file.size / 1024 / 1024).toFixed(1) + 'MB — please compress it to under 8MB and re-select.';
           posterErr.style.display = 'block';
         }
       });
