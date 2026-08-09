@@ -1015,11 +1015,9 @@
     <h2 data-reveal style="--d:80ms">Your content deserves a <em>global stage</em></h2>
     <p data-reveal style="--d:160ms">Tell us about your film or catalogue. We'll map the fastest, highest-value path to audiences worldwide.</p>
     <div class="cf-wrap" data-reveal style="--d:240ms">
-      <form class="cf" id="contactForm" action="https://formsubmit.co/rohitaddanki3761@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="New enquiry — Rohit Media Works website" />
-        <input type="hidden" name="_template" value="table" />
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+      <form class="cf" id="contactForm" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact" />
+        <p style="display:none"><label>Don't fill this out: <input name="bot-field" /></label></p>
         <div class="cf-row">
           <div class="cf-field">
             <label for="cf-name">Your name</label>

@@ -438,15 +438,19 @@
     }, 5000);
   }
 
-  /* ---------- contact form (AJAX → email) ---------- */
+  /* ---------- contact form (AJAX → Netlify Forms) ---------- */
   const cf = document.getElementById("contactForm");
   if (cf) {
     const status = document.getElementById("cfStatus");
     const success = document.getElementById("cfSuccess");
-    const endpoint = "https://formsubmit.co/ajax/rohitaddanki3761@gmail.com";
+    const encode = (data) =>
+      Object.keys(data)
+        .map((k) => encodeURIComponent(k) + "=" + encodeURIComponent(data[k]))
+        .join("&");
     cf.addEventListener("submit", async (e) => {
       e.preventDefault();
-      if (cf._honey && cf._honey.value) return; // spam trap
+      const honey = cf.querySelector('[name="bot-field"]');
+      if (honey && honey.value) return; // spam trap
       const btn = cf.querySelector("button[type=submit]");
       const label = btn.querySelector(".btn-text");
       const original = label ? label.textContent : "";
@@ -455,18 +459,17 @@
       status.className = "cf-status";
       status.textContent = "";
       try {
-        const data = new FormData(cf);
-        const res = await fetch(endpoint, {
+        const data = Object.fromEntries(new FormData(cf).entries());
+        const res = await fetch("/", {
           method: "POST",
-          headers: { Accept: "application/json" },
-          body: data,
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode(data),
         });
-        const json = await res.json().catch(() => ({}));
-        if (res.ok && (json.success === "true" || json.success === true)) {
+        if (res.ok) {
           cf.style.display = "none";
           success.hidden = false;
         } else {
-          throw new Error(json.message || "Submission failed");
+          throw new Error("Submission failed");
         }
       } catch (err) {
         status.className = "cf-status err";
