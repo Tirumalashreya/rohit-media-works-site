@@ -621,15 +621,7 @@ section { position: relative; }
   gap: 22px;
   margin-top: clamp(40px, 5vw, 64px);
 }
-@media (min-width: 981px) {
-  /* 5 cards: 3 across on top, 2 across (centered, wider) below */
-  .svc-grid { grid-template-columns: repeat(6, 1fr); }
-  .svc-grid > :nth-child(1),
-  .svc-grid > :nth-child(2),
-  .svc-grid > :nth-child(3) { grid-column: span 2; }
-  .svc-grid > :nth-child(4),
-  .svc-grid > :nth-child(5) { grid-column: span 3; }
-}
+/* 6 cards: two rows of 3 on desktop */
 .svc-card {
   --acc: var(--gold);
   --acc-glow: var(--gold-glow);
